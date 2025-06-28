@@ -22,11 +22,117 @@
         "oderwat.indent-rainbow",
         "BringFuture.json-to-python",
         "ms-toolsai.jupyter",
-        "PKief.material-icon-theme"
-      ]
+        "PKief.material-icon-theme",
+        "GitHub.github-vscode-theme",
+        "ryuta46.multi-command"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.acceptSuggestionOnCommitCharacter": false,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "editor.fontLigatures": true,
+        "editor.fontSize": 16,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.guides.bracketPairs": true,
+        "editor.linkedEditing": true,
+        "editor.lineHeight": 24,
+        "editor.occurrencesHighlight": "off",
+        "editor.renderWhitespace": "trailing",
+        "editor.suggest.insertMode": "replace",
+        "editor.tabSize": 2,
+        "emmet.triggerExpansionOnTab": true,
+        "explorer.autoReveal": false,
+        "explorer.confirmDelete": false,
+        "explorer.confirmDragAndDrop": false,
+        "files.autoSave": "onFocusChange",
+        "files.exclude": {
+          "**/.git": true,
+          "**/.svn": true,
+          "**/.hg": true,
+          "**/CVS": true,
+          "**/.idea": true,
+          "**/.vscode": true,
+          "**/.DS_Store": true,
+          "**/Thumbs.db": true,
+          "pnpm-lock.yaml": true
+        },
+        "git.confirmSync": false,
+        "git.enableSmartCommit": true,
+        "gitlens.ai.experimental.model": "openai:gpt-3.5-turbo",
+        "gitlens.codeLens.enabled": false,
+        "gitlens.currentLine.enabled": false,
+        "gitlens.graph.layout": "editor",
+        "gitlens.hovers.currentLine.over": "line",
+        "indentRainbow.colors": [
+          "rgba(255,255,64,0.20)",
+          "rgba(127,255,127,0.2)",
+          "rgba(255,127,255,0.2)",
+          "rgba(79,236,236,0.2)"
+        ],
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "multiCommand.commands": [
+          {
+            "command": "multiCommand.makeRoom",
+            "sequence": [
+              "workbench.action.toggleSidebarVisibility",
+              "workbench.action.toggleActivityBarVisibility"
+            ]
+          }
+        ],
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "vue.updateImportsOnFileMove.enabled": true,
+        "workbench.editor.limit.enabled": true,
+        "workbench.editor.limit.value": 5,
+        "workbench.tree.indent": 16,
+        "workbench.tree.renderIndentGuides": "always",
+        "nuxtr.defaultPackageManager": "pnpm",
+        "nuxtr.piniaFiles.defaultTemplate": "setup",
+        "nuxtr.vueFiles.style.addStyleTag": false,
+        "[dart]": {
+          "editor.formatOnSave": true,
+          "editor.formatOnType": true,
+          "editor.rulers": [
+            80
+          ],
+          "editor.selectionHighlight": false,
+          "editor.tabCompletion": "onlySnippets",
+          "editor.wordBasedSuggestions": "off"
+        },
+        "dart.flutterSdkPath": "/home/moncef/SDKS/flutter",
+        "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace",
+        "git.openRepositoryInParentFolders": "never",
+        "workbench.colorTheme": "GitHub Dark",
+        "[css]": {
+          "editor.defaultFormatter": "vscode.css-language-features"
+        },
+        "[javascriptreact]": {
+          "editor.defaultFormatter": "denoland.vscode-deno"
+        },
+        "terminal.integrated.inheritEnv": false,
+        "workbench.iconTheme": "material-icon-theme",
+        "python.defaultInterpreterPath": "/home/moncef/Dev/garden/.venv",
+        "chat.commandCenter.enabled": false,
+        "editor.minimap.enabled": false,
+        "workbench.sideBar.location": "right",
+        "remote.defaultExtensionsIfInstalledLocally": [
+          "GitHub.copilot",
+          "GitHub.copilot-chat",
+          "GitHub.vscode-pull-request-github"
+        ],
+        "docker.extension.enableComposeLanguageServer": false
+      }
     }
   },
   "forwardPorts": [
-    8000,8025
-  ]
+    8000,
+    8025
+  ],
+  "postCreateCommand": "cp .devcontainer/keybindings.json .vscode/keybindings.json || true"
 }
