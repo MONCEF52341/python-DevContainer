@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install --upgrade pip
 
-RUN pip install django psycopg2 django-debug-toolbar djangorestframework
+RUN pip install django psycopg2 django-debug-toolbar djangorestframework django-jazzmin black isort flake8
 
 # Répertoire de travail
 WORKDIR /workspace
